@@ -1,13 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Routes, Route} from 'react-router-dom';
+import Home from './routes/Home'
+import Navbar from './components/Navbar.js';
+import './components/NavbarStyles.css';
 
 function App() {
   return (
-    <div className="App">
-      <div className='App-header'>
-      <h1>GrabFood</h1>
-      </div>
-    </div>
+    <>
+    <Routes>
+      <Route path='/' element ={<Home />} />
+      <Route path='/' element ={<Navbar />} />
+    </Routes>
+    </>
   );
 }
 
