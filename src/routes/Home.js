@@ -5,7 +5,6 @@ import Video from '../components/Video'
 const Home = () => {
   return (
     <div>
-      <Navbar/>
       <Video/>
     </div>
   )

@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import {FaBars, FaTimes} from 'react-icons/fa';
 //import {} from 'react-icons';
 import './NavbarStyles.css';
+import "./LoginForm.css";
+import LoginForm from './LoginForm';
 
 
 const Navbar = () => {
@@ -25,7 +27,12 @@ const Navbar = () => {
         </li>
 
         <li>
-            <Link to='/login'>Register</Link>
+            <Link to='/login'>Login</Link>
+            
+        </li>
+        <li>
+            <Link to='/signin'>Sign In</Link>
+            
         </li>
 
       </ul>

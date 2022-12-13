@@ -28,7 +28,7 @@ const SigninForm = () => {
           type="email"
           id="inputEmail"
           name="email"
-          ref={register({
+          ref={register("email",{
             required: "Enter your e-mail",
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
@@ -41,7 +41,7 @@ const SigninForm = () => {
           type="email"
           id="inputEmail"
           name="email"
-          ref={register({
+          ref={register("reenteremail",{
             required: "Reenter your e-mail",
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
@@ -49,25 +49,25 @@ const SigninForm = () => {
             },
           })}
         />
-        {errors.email && <p className="error">{errors.email.message}</p>}
+        {errors && errors.email && <p className="error">{errors.email.message}</p>}
 
         <label htmlFor="inputPassword">Password</label>
         <input
           type="password"
           id="inputPassword"
           name="password"
-          ref={register({ required: "Enter your password" })}
+          ref={register("password", { required: "Enter your password" })}
         />
-        {errors.password && <p className="error">{errors.password.message}</p>}
+        {errors && errors.password && <p className="error">{errors.password.message}</p>}
 
         <label htmlFor="inputPassword">Re-enter password</label>
         <input
           type="password"
           id="inputPassword"
           name="password"
-          ref={register({ required: "Re-enter your password" })}
+          ref={register("repassword",{ required: "Re-enter your password" })}
         />
-        {errors.password && <p className="error">{errors.password.message}</p>}
+        {errors && errors.password && <p className="error">{errors.password.message}</p>}
 
 
         <button type="submit">Sign in</button>
