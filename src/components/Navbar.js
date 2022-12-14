@@ -17,21 +17,17 @@ const Navbar = () => {
       <Link to='/'><h1>GrabYourCoffee</h1></Link>
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li>
-            <Link to='/products'>Products</Link>
+            <Link to='/products'>About us</Link>
         </li>
         <li>
-            <Link to='/companies'>Companies</Link>
+            <Link to='/companies'>Products</Link>
         </li>
         <li>
             <Link to='/contacts'>Contact</Link>
         </li>
 
         <li>
-            <Link to='/login'>Login</Link>
-            
-        </li>
-        <li>
-            <Link to='/signin'>Sign In</Link>
+          <button id='buy_button'><Link to='/signin'>Buy</Link> </button>
             
         </li>
 

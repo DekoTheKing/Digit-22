@@ -17,7 +17,7 @@ const Video = () => {
 
        <div className="sponsors">
         <Link to='/products' className='btn'>Check our products</Link>
-        <Link to='/company2' className='btn btn-light'>Order Coffee</Link>
+        <Link to='/company2' className='btn btn-light'>Order Now</Link>
        </div>
 
     </div>
