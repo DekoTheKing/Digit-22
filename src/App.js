@@ -5,16 +5,18 @@ import Navbar from './components/Navbar.js';
 import LoginForm from './components/LoginForm.js'
 import SigninForm from './components/SigninForm'
 import './components/NavbarStyles.css';
+import DemoForm from './components/DemoForm';
 
 
 function App() {
   return (
+
     <>
     <Navbar></Navbar>
     <Routes>
       <Route path=''  element ={<Home />} />
       <Route path='/login' element={<LoginForm />} />
-      <Route path='/signin' element={<SigninForm/>} />
+      <Route path='/signin' element={<DemoForm/>} />
     </Routes>
    
     </>

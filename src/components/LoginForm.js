@@ -10,6 +10,7 @@ const LoginForm = () => {
   }
 
   return (
+    <div className="log-form">
     <div className="login-form">
       <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <label htmlFor="inputEmail">E-mail</label>
@@ -38,8 +39,10 @@ const LoginForm = () => {
         {errors && errors.password && <p className="error">{errors.password.message}</p>}
 
         <button type="submit">Login</button>
+        <end> </end>
         <button type="submit">Sign in</button>
       </form>
+    </div>
     </div>
   );
 };

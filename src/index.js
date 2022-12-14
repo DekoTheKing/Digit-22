@@ -5,6 +5,7 @@ import App from './App';
 import {BrowserRouter} from 'react-router-dom';
 import './components/NavbarStyles.css';
 
+
 ReactDOM.render(
     <BrowserRouter>
     <App />
