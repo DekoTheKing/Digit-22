@@ -7,6 +7,7 @@
     align-items: center;
     padding: 1rem;
     z-index: 10;
+    background-color: black;
 }
     .nav-menu{
         display: flex;

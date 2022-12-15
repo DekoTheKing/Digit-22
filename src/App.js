@@ -5,8 +5,9 @@ import Navbar from './components/Navbar.js';
 import LoginForm from './components/LoginForm.js'
 import './components/NavbarStyles.css';
 import DemoForm from './components/DemoForm';
-import Imageslider from './components/Imageslider';
-import { SliderData } from './components/SliderData';
+
+import CoffeeProducts from './components/CoffeeProducts';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -16,10 +17,13 @@ function App() {
     <Navbar></Navbar>
     <Routes>
       <Route path=''  element ={<Home />} />
+      <Route path='/home'  element ={<Home />} />
       <Route path='/login' element={<LoginForm />} />
       <Route path='/signup' element={<DemoForm/>} />
+      <Route path='/products' element={<CoffeeProducts/>} />      
+      <Route path='/footer' element={<Footer/>} />
     </Routes>
-    <Imageslider slides={SliderData}/>
+    
     </>
   );
 }

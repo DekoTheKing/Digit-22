@@ -38,6 +38,11 @@
     color: #fff;
 }
 
+.sponsors{
+    display: flex;
+    justify-content: center;
+}
+
 
 @media screen and (max-width: 640px){
     .content h1{
