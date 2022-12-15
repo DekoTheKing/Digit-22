@@ -14,13 +14,10 @@ function App() {
 
     <>
     <Navbar></Navbar>
-    {/* <Imageslider slides={SliderData}/> */}
-    
     <Routes>
       <Route path=''  element ={<Home />} />
       <Route path='/login' element={<LoginForm />} />
       <Route path='/signup' element={<DemoForm/>} />
-      {/* <Route path='/ImageSlider' element={<Imageslider/>}/> */}
     </Routes>
     <Imageslider slides={SliderData}/>
     </>

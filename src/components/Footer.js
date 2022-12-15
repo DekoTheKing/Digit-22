@@ -1,25 +1,39 @@
-// import React from "react";
-// import './Footer.css';
-// import {FaFacebook, FaLinkedin, FaMailBulk, FaSearchLocation} from 'react/icons/fa'
+import React from "react";
+import './Footer.css';
+import {FaFacebook, FaLinkedin, FaMailBulk, FaSearchLocation, FaTwitter} from 'react-icons/fa'
 
 
-// const Footer = () => {
-//   return (
-//     <div className="footer">
-//       <div className="footer-container">
-//         <div className="left">
-//             <div className="location">
-//                 <FaSearchLocation size={20} style={{color: '#ffffff', marginRight:'2rem'}} />
-//             </div>
-//                  <p>ul. Ilindenska 15A</p>
-//                  <h4>Skopje, Macedonia</h4>
-//         </div>
-//         <div className="email">
-//             <h4><FaMailBulk size={20} style={{color: '#ffffff', marginRight:'2rem'}} /> coffeelab@gmail.com</h4>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
+const Footer = () => {
+  return (
+    <div className="footer">
+      <div className="footer-container">
+        <div className="left">
+            <div className="location">
+                <FaSearchLocation size={20} style={{color: '#ffffff', marginRight:'2rem'}} />
+            <div>
+                 <p>ul. Ilindenska 15A</p>
+                 <h4>Skopje, Macedonia</h4>
+            </div>     
+        </div>
+        <div className="email">
+            <h4><FaMailBulk size={20} style={{color: '#ffffff', marginRight:'2rem'}} /> coffeelab@gmail.com</h4>
+        </div>
+      </div>
+      <div className="right">
+        <h4>About Us</h4>
+        <p>"We are a team of people who love coffee and understand the need of coffee
+            in your everyday work wheater you are at work, with your friends or at home.
+            Here you will find the best coffee brands, at proven best prices on the market. "</p>
+        <div className="social">
+        <a href="www.facebook.com" target='_blank'><FaFacebook size={30} style={{color: '#ffffff', marginRight:'1rem'}}/></a>
+        <FaTwitter size={30} style={{color: '#ffffff', marginRight:'1rem'}}/>
+        <FaLinkedin size={30} style={{color: '#ffffff', marginRight:'1rem'}}/>
+      </div>
+      </div>
+      
+     </div>
+    </div>
+  )
+}
 
-// export default Footer
+export default Footer
