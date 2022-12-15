@@ -27,7 +27,7 @@ const Navbar = () => {
         </li>
 
         <li>
-          <button id='buy_button'><Link to='/signin'>Buy</Link> </button>
+          <button id='buy_button'><Link to='/signup'>Buy</Link> </button>
             
         </li>
 

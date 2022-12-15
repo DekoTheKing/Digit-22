@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./DemoForm.css"
 
 class DemoForm extends React.Component {
@@ -12,6 +13,9 @@ class DemoForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  // const navigate = useNavigate();
+  
      
   handleChange(event) {
     let input = this.state.input;
@@ -21,7 +25,7 @@ class DemoForm extends React.Component {
       input
     });
   }
-     
+     // TODO - Update the state code
   handleSubmit(event) {
     event.preventDefault();
   
@@ -36,6 +40,8 @@ class DemoForm extends React.Component {
         this.setState({input:input});
   
         alert('Demo Form is submitted');
+
+        //navigate('/login');
     }
   }
   
