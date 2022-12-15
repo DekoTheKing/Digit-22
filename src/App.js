@@ -5,6 +5,8 @@ import Navbar from './components/Navbar.js';
 import LoginForm from './components/LoginForm.js'
 import './components/NavbarStyles.css';
 import DemoForm from './components/DemoForm';
+import Imageslider from './components/Imageslider';
+import { SliderData } from './components/SliderData';
 
 
 function App() {
@@ -12,12 +14,15 @@ function App() {
 
     <>
     <Navbar></Navbar>
+    {/* <Imageslider slides={SliderData}/> */}
+    
     <Routes>
       <Route path=''  element ={<Home />} />
       <Route path='/login' element={<LoginForm />} />
       <Route path='/signup' element={<DemoForm/>} />
+      {/* <Route path='/ImageSlider' element={<Imageslider/>}/> */}
     </Routes>
-   
+    <Imageslider slides={SliderData}/>
     </>
   );
 }
