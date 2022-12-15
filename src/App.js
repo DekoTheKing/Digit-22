@@ -5,6 +5,7 @@ import Navbar from './components/Navbar.js';
 import LoginForm from './components/LoginForm.js'
 import './components/NavbarStyles.css';
 import DemoForm from './components/DemoForm';
+import CoffeeProducts from './components/CoffeeProducts';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path=''  element ={<Home />} />
       <Route path='/login' element={<LoginForm />} />
       <Route path='/signup' element={<DemoForm/>} />
+      <Route path='/products' element={<CoffeeProducts/>} />
     </Routes>
    
     </>
