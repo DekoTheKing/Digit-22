@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="right">
-        <h4>About Us</h4>
+        <h4 id="aboutus">About Us</h4>
         <p>"We are a team of people who love coffee and understand the need of coffee
             in your everyday work wheater you are at work, with your friends or at home.
             Here you will find the best coffee brands, at proven best prices on the market. "</p>

@@ -4,6 +4,9 @@ import Footer from '../components/Footer'
 import Imageslider from '../components/Imageslider';
 import { SliderData } from '../components/SliderData';
 
+
+
+
 const Home = () => {
   return (
     <div>

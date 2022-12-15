@@ -12,7 +12,6 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-
     <>
     <Navbar></Navbar>
     <Routes>

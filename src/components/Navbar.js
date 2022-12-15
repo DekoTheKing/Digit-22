@@ -15,8 +15,8 @@ const Navbar = () => {
     <div className='header'>
       <Link to='/'><h1>GrabYourCoffee</h1></Link>
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-        <li>
-            <Link to='/footer'>About us</Link>
+        <li>  
+            <a href='#about-us'>About us-n</a> 
         </li>
         <li>
             <Link to='/products'>Products</Link>
