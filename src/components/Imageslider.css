@@ -8,9 +8,14 @@
     
     
 } */
+
 .images
 {
     background-size: contain;
     background-repeat: no-repeat;
     background-position-Y: center;
+}
+.slide-container > div > div > button:nth-child(n)
+{
+    padding: 0px;
 }
