@@ -4,7 +4,6 @@ import {FaBars, FaTimes} from 'react-icons/fa';
 //import {} from 'react-icons';
 import './NavbarStyles.css';
 import "./LoginForm.css";
-import LoginForm from './LoginForm';
 
 
 const Navbar = () => {
