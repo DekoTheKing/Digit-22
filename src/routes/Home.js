@@ -1,6 +1,5 @@
 import React from 'react'
 import Video from '../components/Video'
-import CoffeeProducts from '../components/CoffeeProducts'
 import Footer from '../components/Footer'
 
 const Home = () => {
@@ -8,7 +7,7 @@ const Home = () => {
     <div>
       <Video/>
       
-      {/* <Footer/> */}
+      <Footer/>
 
     </div>
   )

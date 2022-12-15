@@ -6,6 +6,7 @@ import LoginForm from './components/LoginForm.js'
 import './components/NavbarStyles.css';
 import DemoForm from './components/DemoForm';
 import CoffeeProducts from './components/CoffeeProducts';
+import NotFound from './components/NotFound';
 
 
 function App() {
@@ -14,10 +15,12 @@ function App() {
     <>
     <Navbar></Navbar>
     <Routes>
-      <Route path=''  element ={<Home />} />
+      <Route path='/'  element ={<Home />} />
+      <Route path='/home'  element ={<Home />} />
       <Route path='/login' element={<LoginForm />} />
       <Route path='/signup' element={<DemoForm/>} />
       <Route path='/products' element={<CoffeeProducts/>} />
+      <Route path='*' element={<NotFound/>} />
     </Routes>
    
     </>
