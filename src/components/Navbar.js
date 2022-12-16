@@ -10,13 +10,28 @@ const Navbar = () => {
     const[click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
 
+    function handleScroll() {
+      window.scroll({
+        top: document.body.offsetHeight,
+        left: 0, 
+        behavior: 'smooth',
+      });
+    }
+
+
+    function scrollToTop(){
+      window.scroll({
+        top: 0,
+        behavior: 'smooth',
+    });
+    }
 
   return (
     <div className='header'>
-      <Link to='/'><h1>GrabYourCoffee</h1></Link>
+      <Link onClick={scrollToTop}><h1>GrabYourCoffee</h1></Link>
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
         <li>  
-            <a href='#about-us'>About us-n</a> 
+            <Link onClick={handleScroll}> About us</Link>
         </li>
         <li>
             <Link to='/products'>Products</Link>
@@ -35,6 +50,8 @@ const Navbar = () => {
         {click ? (<FaTimes size={20} style={{color: '#fff'}}/>) : ( <FaBars size={20} style={{color: '#fff'}}/>)}
        
       </div>
+
+      
     </div>
   )
 }

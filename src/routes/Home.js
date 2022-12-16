@@ -11,6 +11,7 @@ const Home = () => {
   return (
     <div>
       <Video/>
+      <h3>OUR GALLERY</h3>
       <Imageslider slides={SliderData}/>
       <Footer/>
 
