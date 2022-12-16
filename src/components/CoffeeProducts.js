@@ -100,7 +100,7 @@ function CoffeeProducts() {
       title: "Mikel's Pumpkin Spice Late",
       imageUrl:
         "https://globalassets.starbucks.com/assets/c3f556afdd4e4a18b96f51135afe2de2.jpg?impolicy=1by1_wide_topcrop_630",
-      brand: "Mikel",
+      brand: "Starbucks",
       body: "370 Calories 16g Fat 47g Carbs 11g Protein",
       calories: "370",
       fat: "16g",
@@ -108,6 +108,49 @@ function CoffeeProducts() {
       protein: "11g",
       price: "620 MKD",
     },
+    {
+      title: "Freddo Espresso",
+      imageUrl:
+        "https://www.kliknijadi.mk/images/food/57164_060721145217972_400x300.jpg",
+      brand: "Mikel",
+      calories: "110",
+      fat: "4.5g",
+      protein: "2g",
+      price: "215 MKD",
+    },
+    {
+      title: "Freddo Cappucino Latte",
+      imageUrl:
+        "https://www.kliknijadi.mk/images/food/57170_060721144900144_400x300.jpg",
+      brand: "Mikel",
+      calories: "220",
+      fat: "4.5g",
+      carbs: "23g",
+      protein: "2g",
+      price: "250 MKD",
+    },
+    {
+      title: "Greek Frappe",
+      imageUrl:
+        "https://www.kliknijadi.mk/images/food/57175_060721150415816_400x300.jpg",
+      brand: "Mikel",
+      calories: "110",
+      fat: "4.5g",
+      protein: "2g",
+      price: "115 MKD",
+    },
+    {
+      title: "Freddo Espresso Au Lait",
+      imageUrl:
+        "https://www.kliknijadi.mk/images/food/57167_060721150137050_400x300.jpg",
+      brand: "Mikel",
+      calories: "220",
+      fat: "4.5g",
+      carbs: "23g",
+      protein: "2g",
+      price: "350 MKD",
+    },
+    
   ];
 
   const brands = coffeeProducts
