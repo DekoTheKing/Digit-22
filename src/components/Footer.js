@@ -25,9 +25,9 @@ const Footer = () => {
             in your everyday work wheater you are at work, with your friends or at home.
             Here you will find the best coffee brands, at proven best prices on the market. "</p>
         <div className="social">
-        <a href="www.facebook.com" target='_blank'><FaFacebook size={30} style={{color: '#ffffff', marginRight:'1rem'}}/></a>
-        <FaTwitter size={30} style={{color: '#ffffff', marginRight:'1rem'}}/>
-        <FaLinkedin size={30} style={{color: '#ffffff', marginRight:'1rem'}}/>
+        <a href="https://www.facebook.com" target='_blank'><FaFacebook size={30} style={{color: '#ffffff', marginRight:'1rem'}}/></a>
+        <a href="https://twitter.com" target='_blank'><FaTwitter size={30} style={{color: '#ffffff', marginRight:'1rem'}}/></a>
+        <a href="https://www.linkedin.com" target='_blank'><FaLinkedin size={30} style={{color: '#ffffff', marginRight:'1rem'}}/></a>
       </div>
       </div>
       
