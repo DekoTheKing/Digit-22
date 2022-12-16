@@ -1,3 +1,4 @@
+import { or } from "ajv/dist/compile/codegen";
 import React from "react";
 import "./Card.css";
 
@@ -6,6 +7,10 @@ import 'reactjs-popup/dist/index.css';
 import ModalWindow from './ModalWindow';
 
 function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
+  const {orders,setOrders} = React.useContext(BasketContext)
+  const addtoCart = () => {
+    setOrders([...orders, { title, price}])
+  } 
   return (
     <div className="card-container">
       <div className="image-container">

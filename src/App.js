@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Home from './routes/Home'
 import Navbar from './components/Navbar.js';
@@ -10,11 +10,18 @@ import CoffeeProducts from './components/CoffeeProducts';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound.js';
+import { createContext } from 'react';
 
 
+ export const BasketContext = createContext({
+    orders:[], 
+    setOrders: () => {}
+  })
 function App() {
+  const [orders,setOrders] = useState([])
   return (
     <>
+    <BasketContext.Provider value={{orders,setOrders}}>
     <Navbar></Navbar>
     <Routes>
       <Route path='/'  element ={<Home />} />
@@ -26,7 +33,7 @@ function App() {
       <Route path='/footer' element={<Footer/>} />
       <Route path='*' element={<NotFound/>}/>
     </Routes>
-    
+    </BasketContext.Provider>
     
     </>
   );
