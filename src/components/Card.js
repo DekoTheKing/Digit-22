@@ -1,8 +1,18 @@
+import { or } from "ajv/dist/compile/codegen";
 import React from "react";
+import { BasketContext } from "../App";
 
 import "./Card.css";
 
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import ModalWindow from './ModalWindow';
+
 function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
+  const {orders,setOrders} = React.useContext(BasketContext)
+  const addtoCart = () => {
+    setOrders([...orders, { title, price}])
+  } 
   return (
     <div className="card-container">
       <div className="image-container">
@@ -24,8 +34,8 @@ function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
         <div className="price">
           <p>{price}</p>
         </div>
-        <button>
-          <a>Order</a>
+        <button onClick={addtoCart}>
+          Order
         </button>
       </div>
     </div>
