@@ -30,6 +30,9 @@ const Navbar = () => {
     <div className='header'>
       <Link onClick={scrollToTop}><h1>GrabYourCoffee</h1></Link>
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+      <li>  
+            <Link to='/home'> Home</Link>
+        </li>
         <li>  
             <Link onClick={handleScroll}> About us</Link>
         </li>

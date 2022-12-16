@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import { BasketContext } from '../App';
 import { List,ListItem,IconButton,ListItemText,TextField} from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
+import {Link} from 'react-router-dom';
 
 
 function ModalInFunctionalComponent ({title,price}){
@@ -78,12 +79,15 @@ function ModalInFunctionalComponent ({title,price}){
       <ListItemText primary={`${value.title}`} sx={{display:'inline-flex'}} />
       <ListItemText primary={`${value.price}`} />
     </ListItem>
+    
   ))}
 </List>
+<Link to='/signup'><button sx={{display:'inline-flex'}}>Order now</button> </Link>
 <TextField InputProps={{
             readOnly: true,
           }} id="standard-basic" label="Total price" variant="standard" value={totalValue}/>
             </Modal>
+            
 
         </>
     )
