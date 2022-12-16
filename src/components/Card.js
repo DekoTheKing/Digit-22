@@ -1,6 +1,8 @@
 import React from "react";
-
 import "./Card.css";
+
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
   return (
@@ -23,10 +25,12 @@ function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
       <div className="btn">
         <div className="price">
           <p>{price}</p>
-        </div>
-        <button>
-          <a>Order</a>
-        </button>
+        </div>     
+        
+  <Popup trigger={<button> Order</button>} position="right center">
+    <div>Added to cart !!</div>
+  </Popup>
+  
       </div>
     </div>
   );
