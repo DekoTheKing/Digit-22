@@ -7,6 +7,7 @@ import './components/NavbarStyles.css';
 import DemoForm from './components/DemoForm';
 
 import CoffeeProducts from './components/CoffeeProducts';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound.js';
 
@@ -20,7 +21,8 @@ function App() {
       <Route path='/home'  element ={<Home />} />
       <Route path='/login' element={<LoginForm />} />
       <Route path='/signup' element={<DemoForm/>} />
-      <Route path='/products' element={<CoffeeProducts/>} />      
+      <Route path='/products' element={<CoffeeProducts/>} />   
+      <Route path='contacts' element={<Contact/>} />   
       <Route path='/footer' element={<Footer/>} />
       <Route path='*' element={<NotFound/>}/>
     </Routes>

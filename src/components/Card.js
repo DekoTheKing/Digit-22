@@ -3,6 +3,7 @@ import "./Card.css";
 
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import ModalWindow from './ModalWindow';
 
 function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
   return (
@@ -26,10 +27,11 @@ function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
         <div className="price">
           <p>{price}</p>
         </div>     
+        <div id="modal"><ModalWindow/></div>
         
-  <Popup trigger={<button> Order</button>} position="right center">
+  {/* <Popup trigger={<button> Order</button>} position="right center">
     <div>Added to cart !!</div>
-  </Popup>
+  </Popup> */}
   
       </div>
     </div>
