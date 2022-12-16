@@ -1,5 +1,6 @@
 import React from "react";
 import './Contact.css';
+import coffecontact from '../assets/coffeecontact.jpg';
 
 
 function Button(props){
@@ -49,11 +50,11 @@ function Button(props){
     return(
       <div className="main">
         <div className="main-body">
-             <image></image>
+        <img src={coffecontact} alt="Logo" />
           </div>
         <form className="main-form" onSubmit = "#">
           <h1 id="contact_heading">Contact Us</h1>     <br/>
-          
+          <p id="contact_p">Wanna start working with us? Fill this form and wait for our reply.</p> <br/><br/>
           <div>
             <label>Name</label>     <br/>
             <Input hint="Enter your name" type="text" ID="name"/> 
@@ -61,7 +62,7 @@ function Button(props){
           
           <div className="form-element">
             <label>Email</label>  <br/>
-            <Input hint="Enter your Email ID" type="email" ID="email"/> 
+            <Input hint="Enter your Email" type="email" ID="email"/> 
           </div>
           
           <div className="form-element">
