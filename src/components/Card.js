@@ -1,7 +1,5 @@
 import { or } from "ajv/dist/compile/codegen";
 import React from "react";
-import { BasketContext } from "../App";
-
 import "./Card.css";
 
 import Popup from 'reactjs-popup';
@@ -33,10 +31,13 @@ function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
       <div className="btn">
         <div className="price">
           <p>{price}</p>
-        </div>
-        <button onClick={addtoCart}>
-          Order
-        </button>
+        </div>     
+        <div id="modal"><ModalWindow/></div>
+        
+  {/* <Popup trigger={<button> Order</button>} position="right center">
+    <div>Added to cart !!</div>
+  </Popup> */}
+  
       </div>
     </div>
   );
