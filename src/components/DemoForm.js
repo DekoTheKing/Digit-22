@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./DemoForm.css"
+import coffeepic from '../assets/emoji_coffee.png'
 
 class DemoForm extends React.Component {
     constructor() {
@@ -115,6 +116,7 @@ class DemoForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
   
           <div class="form-group">
+            <p id='form_text'>You must make an account so you can get your daily doze of coffee. <img src={coffeepic} alt="coffepic" style={{width: '40px', height : '40px'}}/> </p> <br/>
             <label for="username">Username:</label>
             <input 
               type="text" 

@@ -50,3 +50,8 @@ button {
     cursor: pointer;
 }
 
+
+#form_text{
+    color: gray;
+    font-size: medium;
+}
