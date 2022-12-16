@@ -4,7 +4,7 @@ import {BasketContext} from '../App'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import ModalWindow from './ModalWindow';
-import BasketContext from '../App'
+
 
 function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
   return (
