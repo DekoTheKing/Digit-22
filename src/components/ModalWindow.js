@@ -1,11 +1,20 @@
 import { width } from '@mui/system';
 import React, {useState} from 'react';
 import Modal from 'react-modal';
+import { BasketContext } from '../App';
+import { List,ListItem,IconButton,ListItemText} from '@mui/material';
+import ClearIcon from '@mui/icons-material/Clear';
 
 
-function ModalInFunctionalComponent (){
-
+function ModalInFunctionalComponent ({title,price}){
     const [modalIsOpen,setModalIsOpen] = useState(false);
+    const {orders,setOrders} = React.useContext(BasketContext)
+        console.log(orders)
+        const addtoCart = () => {
+        setOrders([...orders, { title, price}])
+        setModalIsOpen(true)
+        } 
+    
 
     const setModalIsOpenToTrue =()=>{
         setModalIsOpen(true)
@@ -15,10 +24,12 @@ function ModalInFunctionalComponent (){
         setModalIsOpen(false)
     }
 
+    
+
     return(
         <>
-            <button onClick={setModalIsOpenToTrue}>Order</button>
-
+            <button onClick={addtoCart}>Order</button>
+                
             <Modal 
             style={{
                 overlay: {
@@ -50,7 +61,27 @@ function ModalInFunctionalComponent (){
             isOpen={modalIsOpen}>
                 <button onClick={setModalIsOpenToFalse}>x</button>
                 <p>Modal is open</p>
+                <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                {orders.map((value) => (
+                    <ListItem
+                    key={value.title}
+                    disableGutters
+                    secondaryAction={
+        <IconButton aria-label="comment" onClick={()=>{
+            setOrders(orders.filter(order => order.title !== value.title))
+
+        }}>
+          <ClearIcon/>
+        </IconButton>
+      }
+    >
+      <ListItemText primary={`${value.title}`} sx={{display:'inline-flex'}} />
+      <ListItemText primary={`${value.price}`} />
+    </ListItem>
+  ))}
+</List>
             </Modal>
+
         </>
     )
 }

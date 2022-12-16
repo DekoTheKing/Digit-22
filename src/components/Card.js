@@ -1,16 +1,12 @@
 import React from "react";
 import "./Card.css";
-
-//import Popup from 'reactjs-popup';
-//import 'reactjs-popup/dist/index.css';
+import {BasketContext} from '../App'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 import ModalWindow from './ModalWindow';
 import BasketContext from '../App'
 
 function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
-  const {orders,setOrders} = React.useContext(BasketContext)
-  const addtoCart = () => {
-    setOrders([...orders, { title, price}])
-  } 
   return (
     <div className="card-container">
       <div className="image-container">
@@ -32,7 +28,7 @@ function Card({ title, imageUrl, calories, fat, carbs, protein, price }) {
         <div className="price">
           <p>{price}</p>
         </div>     
-        <div id="modal"><ModalWindow/></div>
+        <div id="modal"><ModalWindow title={title} price={price}/></div>
         
   {/* <Popup trigger={<button> Order</button>} position="right center">
     <div>Added to cart !!</div>
