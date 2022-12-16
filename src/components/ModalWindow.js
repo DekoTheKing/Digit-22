@@ -2,7 +2,7 @@ import { width } from '@mui/system';
 import React, {useState} from 'react';
 import Modal from 'react-modal';
 import { BasketContext } from '../App';
-import { List,ListItem,IconButton,ListItemText} from '@mui/material';
+import { List,ListItem,IconButton,ListItemText,TextField} from '@mui/material';
 import ClearIcon from '@mui/icons-material/Clear';
 
 
@@ -23,7 +23,7 @@ function ModalInFunctionalComponent ({title,price}){
     const setModalIsOpenToFalse =()=>{
         setModalIsOpen(false)
     }
-
+    const totalValue = orders.reduce((sum,val) => sum+=  +val.price.split(' ')[0],0);
     
 
     return(
@@ -61,7 +61,7 @@ function ModalInFunctionalComponent ({title,price}){
             isOpen={modalIsOpen}>
                 <button onClick={setModalIsOpenToFalse}>x</button>
                 <p>Modal is open</p>
-                <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                <List sx={{ width: '100%', maxWidth: 500, bgcolor: 'background.paper', justifyContent:'space-between' }}>
                 {orders.map((value) => (
                     <ListItem
                     key={value.title}
@@ -80,6 +80,9 @@ function ModalInFunctionalComponent ({title,price}){
     </ListItem>
   ))}
 </List>
+<TextField InputProps={{
+            readOnly: true,
+          }} id="standard-basic" label="Total price" variant="standard" value={totalValue}/>
             </Modal>
 
         </>
